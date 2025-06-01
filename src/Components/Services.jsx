@@ -1,107 +1,86 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+function useServices() {
+  const [services, setServices] = useState([]);
 
-function Services() {
-  return (
-    <div>
-       <section className="services padding" id="services" data-scroll-index="2">
-        <div className="container">
+  useEffect(() => {
+    
+    setServices([
+      {
+        icon: 'fa-cog',
+        title: 'Highly Customisable',
+        description: 'Offers extensive customisation options to meet diverse requirements.'
+      },
+      {
+        icon: 'fa-desktop',
+        title: 'Responsive Design',
+        description: 'Ensures optimal viewing experience across various devices.'
+      },
+      {
+        icon: 'fa-clock-o',
+        title: 'Optimised for Speed',
+        description: 'Designed for fast loading times and efficient performance.'
+      },
+      {
+        icon: 'fa-lightbulb-o',
+        title: 'Features & Plugins',
+        description: 'Provides a rich set of features and plugin support.'
+      },
+      {
+        icon: 'fa-pencil-square-o',
+        title: 'Designs & Interfaces',
+        description: 'Delivers intuitive and aesthetically pleasing user interfaces.'
+      },
+      {
+        icon: 'fa-comment-o',
+        title: 'Dedicated Support',
+        description: 'Offers reliable and responsive customer support services.'
+      }
+    ]);
+  }, []);
 
-           
-            <div className="services_title text-center">
-                <h2 className="heading-primary text-center mb-5">Our Services</h2>
-                <p className="mb-5">Lorem Ipsum is simply dummy text of the printing and type setting
-                    industry when an unknown printer took a galley of type and scrambled it to make a type specimen
-                    book It has survived not only five centuries.</p>
-            </div>
-            
-
-            <div className="row">
-
-                
-                <div className="col-lg-4 col-md-6 col-sm-10 mx-auto">
-                    <div className="content-box text-center">
-                        <div className="content-box-icon">
-                            <i className="fa fa-cog fa-2x"></i>
-                        </div>
-                        <h5 className="heading-secondary">Highly customizable</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi cupiditate! Nobis
-                            corporis exercitationem obcaecati magni rerum explicabo vel nemo.
-                        </p>
-                    </div>
-                </div>
-               
-                <div className="col-lg-4 col-md-6 col-sm-10 mx-auto">
-                    <div className="content-box text-center">
-                        <div className="content-box-icon">
-                            <i className="fa fa-desktop fa-2x"></i>
-                        </div>
-                        <h5 className="heading-secondary">Responsive design</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel viverra odio, non
-                            pellentesque tortor. Quisque eu ultrices sem. Proin quis ex erat.
-                        </p>
-                    </div>
-                </div>
-               
-                <div className="col-lg-4 col-md-6 col-sm-10 mx-auto">
-                    <div className="content-box text-center">
-                        <div className="content-box-icon">
-                            <i className="fa fa-clock-o fa-2x"></i>
-                        </div>
-                        <h5 className="heading-secondary">Optimised for speed</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit inventore fugiat rerum enim,
-                            quibusdam mollitia laborum magnam nobis sed.
-                        </p>
-                    </div>
-                </div>
-               
-                <div className="col-lg-4 col-md-6 col-sm-10 mx-auto">
-                    <div className="content-box text-center">
-                        <div className="content-box-icon">
-                            <i className="fa fa-lightbulb-o fa-2x"></i>
-                        </div>
-                        <h5 className="heading-secondary">Features & plugins</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptatem atque, hic ut
-                            necessitatibus nesciunt ullam officia.
-                        </p>
-                    </div>
-                </div>
-               
-                <div className="col-lg-4 col-md-6 col-sm-10 mx-auto">
-                    <div className="content-box text-center">
-                        <div className="content-box-icon">
-                            <i className="fa fa-pencil-square-o fa-2x"></i>
-                        </div>
-                        <h5 className="heading-secondary">Designs & interfaces</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa.
-                        </p>
-                    </div>
-                </div>
-               
-                <div className="col-lg-4 col-md-6 col-sm-10 mx-auto">
-                    <div className="content-box text-center">
-                        <div className="content-box-icon">
-                            <i className="fa fa-comment-o fa-2x"></i>
-                        </div>
-                        <h5 className="heading-secondary">Dedicated support</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae vehicula arcu. Integer
-                            urna risus, fermentum at cursus.
-                        </p>
-                    </div>
-                </div>
-                
-
-            </div>
-        </div>
-    </section>
-    </div>
-  )
+  return services;
 }
 
-export default Services
+function ServiceItem({ icon, title, description }) {
+  return (
+    <div className="col-lg-4 col-md-6 col-sm-10 mx-auto">
+      <div className="content-box text-center">
+        <div className="content-box-icon">
+          <i className={`fa ${icon} fa-2x`}></i>
+        </div>
+        <h5 className="heading-secondary">{title}</h5>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
+
+
+function Services() {
+  const services = useServices();
+
+  return (
+    <section className="services padding" id="services" data-scroll-index="2">
+      <div className="container">
+        <div className="services_title text-center">
+          <h2 className="heading-primary text-center mb-5">Our Services</h2>
+          <p className="mb-5">
+            We offer a range of high-quality services tailored to meet your needs.
+          </p>
+        </div>
+        <div className="row">
+          {services.map((service, index) => (
+            <ServiceItem
+              key={index}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Services;

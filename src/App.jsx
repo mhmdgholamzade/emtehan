@@ -15,32 +15,30 @@ import Skills from './Components/Skills';
 import Subscribe from './Components/Subscribe';
 import Team from './Components/Team';
 import Testimonials from './Components/Testimonials';
-import './Css/bootstrap.min.css';
-import './Css/magnific-popup.css';
-import './Css/main.css';
-import './Css/owl.carousel.min.css';
-import './Css/owl.theme.default.css';
-
+import Map from './Components/Map';
 function App() {
   return (
     <>
       <Preloader />
       <Navgition />
       <Header />
-      <About />
-      <Services />
+      <Scroll/>
       <ChooseUs />
-      <Portfolio />
-      <Prices />
-      <Process />
+      <About />
       <Skills />
+      <Services />
+      <Portfolio />
       <Team />
       <Testimonials />
+      <Prices />
+      <Process />
       <Blog />
       <Subscribe />
       <Contact />
+      <Map/>
       <Footer />
-      <Scroll />
+      
+      
     </>
   );
 }

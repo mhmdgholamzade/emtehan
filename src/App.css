@@ -1,7 +1,10 @@
+@import url('https://unpkg.com/leaflet/dist/leaflet.css');
+
+
 @font-face {
   font-family: "IRANSans";
-  src: url("/fonts/IRANSansWeb.woff2") format("woff2"),
-       url("/fonts/IRANSansWeb.woff") format("woff");
+  src: url("/public/font/fontawesome-webfont.woff2") format("woff2"),
+       url("/public/font/fontawesome-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

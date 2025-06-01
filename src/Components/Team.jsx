@@ -19,7 +19,7 @@ function Team() {
                 
                 <div className="col-lg-4 col-md-6 col-sm-6 mx-auto">
                     <div className="team-info">
-                        <img src="img/team/team-02.jpg" alt="team-photo" />
+                        <img src="public/img/team/team-02.jpg" alt="team-photo" />
                         <div className="view-content">
                             <h3 className="title">Sophia</h3>
                             <ul className="icon">
@@ -33,7 +33,7 @@ function Team() {
                
                 <div className="col-lg-4 col-md-6 col-sm-6 mx-auto">
                     <div className="team-info">
-                        <img src="img/team/team-01.jpg" alt="team-photo" />
+                        <img src="public/img/team/team-01.jpg" alt="team-photo" />
                         <div className="view-content">
                             <h3 className="title">Alex Smith</h3>
                             <ul className="icon">
@@ -47,7 +47,7 @@ function Team() {
                
                 <div className="col-lg-4 col-md-6 col-sm-6 mx-auto">
                     <div className="team-info">
-                        <img src="img/team/team-03.jpg" alt="team-photo" />
+                        <img src="public/img/team/team-03.jpg" alt="team-photo" />
                         <div className="view-content">
                             <h3 className="title">Emily</h3>
                             <ul className="icon">

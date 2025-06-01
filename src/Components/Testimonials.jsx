@@ -18,13 +18,13 @@ function Testimonials() {
 
                 <div className=" offset-md-2 col-md-8 col-1g-12 offset-md-2 mx-auto">
                     <div className="testimonials text-center">
-                        <div className="owl-carousel owl-theme">
+                        <div className="OwlCarouselMin OwlThemeDefault">
 
                             <div className="testimo">
                                 <div className="client-area">
                                     <div className="img">
                                         <div className="author">
-                                            <img src="img/testimonial/test-01.jpg" alt="testimonial-picture" />
+                                            <img src="public/img/testimonial/test-01.jpg" alt="testimonial-picture" />
                                         </div>
                                     </div>
                                     <h6>Emily</h6>
@@ -39,7 +39,7 @@ function Testimonials() {
                                 <div className="client-area">
                                     <div className="img">
                                         <div className="author">
-                                            <img src="img/testimonial/test-02.jpg" alt="testimonial-picture" />
+                                            <img src="public/img/testimonial/test-02.jpg" alt="testimonial-picture" />
                                         </div>
                                     </div>
                                     <h6>James Smith</h6>
@@ -54,7 +54,7 @@ function Testimonials() {
                                 <div className="client-area">
                                     <div className="img">
                                         <div className="author">
-                                            <img src="img/testimonial/test-03.jpg" alt="testimonial-picture" />
+                                            <img src="public/img/testimonial/test-03.jpg" alt="testimonial-picture" />
                                         </div>
                                     </div>
                                     <h6>Sophia</h6>
